@@ -1,22 +1,22 @@
 
+using System.Diagnostics;
+using System.IO;
 using UnityEngine;
 
+using UnityEngine.UI;
+
+[RequireComponent(typeof(Text))]
 public class Help : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClick()
     {
-        
-    }
-
-    void OnClickHelp()
-    {
-        Applicaion.OpenUrl();
+        Application.OpenURL("file:./Assets/Help/FQU.chm");
+        print("click!");
     }
 }
