@@ -4,32 +4,26 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed = 2f;
+    public float moveSpeed = 5f; // Скорость движения персонажа
 
-    // Start is called before the first frame update
-    void Start()
+    public Rigidbody2D rb;
+
+    private Vector2 movement;
+
+    void Update()
     {
+        // Получение ввода от пользователя по осям X и Y
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        // Создание вектора движения
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetKey("w"))
-        {
-            transform.position += transform.up * speed * Time.deltaTime;
-        }
-        if (Input.GetKey("a"))
-        {
-            transform.position += -transform.right * speed * Time.deltaTime;
-        }
-        if (Input.GetKey("d"))
-        {
-            transform.position += transform.right * speed * Time.deltaTime;
-        }
-        if (Input.GetKey("s"))
-        {
-            transform.position += -transform.up * speed * Time.deltaTime;
-        }
+
+        // Применение движения к transform
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
