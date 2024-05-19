@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float moveSpeed = 2f; // Скорость движения персонажа
+    public float moveSpeed = 2f;
+    public float sprintSpeed = 2f;
+    public float currentSpeed;
 
     public Animator animator;
 
@@ -15,32 +17,35 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        // Получение ввода от пользователя по осям X и Y
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            currentSpeed = moveSpeed * sprintSpeed;
+        }
+        else
+        {
+            currentSpeed = moveSpeed;
+        }
+
+        
+        movement = new Vector2 (moveX, moveY).normalized;
 
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
-
-
+        animator.SetFloat("Speed", movement.sqrMagnitude * currentSpeed / moveSpeed);
 
         if (movement.sqrMagnitude > 0)
         {
-            animator.SetFloat("LastH", movement.x);
-            animator.SetFloat("LastV", movement.y);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            moveSpeed *= 1.5f;
+            animator.SetFloat("LastH", moveX);
+            animator.SetFloat("LastV", moveY);
         }
         
     }
 
     private void FixedUpdate()
     {
-        // Применение движения к transform
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * currentSpeed * Time.fixedDeltaTime);
     }
 }
