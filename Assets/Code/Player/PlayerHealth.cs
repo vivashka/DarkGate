@@ -1,26 +1,26 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static PlayerHealth;
 
 public class PlayerHealth : MonoBehaviour
 {
-    float health = 10;
+    public int maxHealth = 10;
+    public int health = 10;
     int index;
 
-    // Start is called before the first frame update
+    public delegate void PlayerHealthHandler(int health);
+
+    public PlayerHealthHandler healthHandler;
+
     void Start()
     {
         index = SceneManager.GetActiveScene().buildIndex;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
+        healthHandler?.Invoke(health);
         if (health <= 0)
         {
             SceneManager.LoadScene(index);

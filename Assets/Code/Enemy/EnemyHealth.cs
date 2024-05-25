@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float health = 10;
+    public int maxhealth = 10;
+    public int health = 10;
 
-    // Update is called once per frame
-    void Update()
-    {
+    public delegate void EnemyHealthHandler(int health);
 
-    }
+    public EnemyHealthHandler healthHandler;
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
+        healthHandler?.Invoke(health);
         if (health <= 0)
         {
             Destroy(gameObject);

@@ -20,7 +20,7 @@ public class DynamicYSort : MonoBehaviour
     {
         baseSortingOrder = transform.GetSortingOrder(ySortingOffset);
         
-        foreach (var sortableSprite in sortableSprite)
+        foreach (SortableSprite sortableSprite in sortableSprite)
         {
             sortableSprite.spriteRenderer.sortingOrder = 
                 baseSortingOrder + sortableSprite.relativeOrder;
