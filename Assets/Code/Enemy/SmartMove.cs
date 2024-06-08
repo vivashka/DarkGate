@@ -12,7 +12,6 @@ public class SmartMove : MonoBehaviour
 
     float directionX;
     float directionY;
-    Ray rayGaze = new Ray();
     public float distanceToPlayer;
 
     void Update()
