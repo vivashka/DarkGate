@@ -15,10 +15,18 @@ public class Movement : MonoBehaviour
 
     private Vector2 movement;
 
+    float directionX;
+    float directionY;
+
     void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+
+        float angle = Mathf.Atan2(moveY, moveX);
+        directionX = Mathf.Cos(angle);
+        directionY = Mathf.Sin(angle);
+
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -28,18 +36,17 @@ public class Movement : MonoBehaviour
         {
             currentSpeed = moveSpeed;
         }
-
         
         movement = new Vector2 (moveX, moveY).normalized;
 
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", directionY);
+        animator.SetFloat("Horizontal", directionX);
         animator.SetFloat("Speed", movement.sqrMagnitude * currentSpeed / moveSpeed);
 
         if (movement.sqrMagnitude > 0)
         {
-            animator.SetFloat("LastH", moveX);
-            animator.SetFloat("LastV", moveY);
+            animator.SetFloat("LastH", directionX);
+            animator.SetFloat("LastV", directionY);
         }
         
     }

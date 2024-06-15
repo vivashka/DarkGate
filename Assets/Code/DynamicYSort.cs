@@ -8,7 +8,7 @@ public class DynamicYSort : MonoBehaviour
 {
     private int baseSortingOrder;
     private float ySortingOffset;
-    [SerializeField] private SortableSprite[] sortableSprite;
+    [SerializeField] private SortableSprite[] sortableSprites;
     [SerializeField] private Transform sortOffsetMarker;
 
     private void Start()
@@ -20,7 +20,7 @@ public class DynamicYSort : MonoBehaviour
     {
         baseSortingOrder = transform.GetSortingOrder(ySortingOffset);
         
-        foreach (SortableSprite sortableSprite in sortableSprite)
+        foreach (SortableSprite sortableSprite in sortableSprites)
         {
             sortableSprite.spriteRenderer.sortingOrder = 
                 baseSortingOrder + sortableSprite.relativeOrder;

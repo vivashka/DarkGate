@@ -18,6 +18,7 @@ public class AttackPlayer : MonoBehaviour
     void OnFire()
     {
         animator.SetTrigger("isAttack");
+
     }
 
     void Update()

@@ -172,7 +172,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 40, y: 120, z: 0}
-  m_ExitPosition: {x: 450, y: 530, z: 0}
+  m_ExitPosition: {x: 40, y: 460, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 122815678588053531}
 --- !u!206 &-1917878863800602906
@@ -301,7 +301,7 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: LastV
     m_Type: 1
-    m_DefaultFloat: -1
+    m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}

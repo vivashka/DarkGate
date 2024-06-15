@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8849854077434385318}
   - component: {fileID: 8912557524457736835}
-  - component: {fileID: 8709740128982516702}
   - component: {fileID: 6373731117227972905}
   m_Layer: 0
   m_Name: MainCharacter
@@ -87,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8709740128982516702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354945831900530401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f4f460c10f3684ab1750a641660738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortableSprite:
-  - spriteRenderer: {fileID: 8912557524457736835}
-    relativeOrder: 0
-  sortOffsetMarker: {fileID: 486155285092757917}
 --- !u!95 &6373731117227972905
 Animator:
   serializedVersion: 5
@@ -238,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5531388129662297851}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
