@@ -10,6 +10,9 @@ public class AttackPlayer : MonoBehaviour
     public GameObject attackPoint;
     float scaleFactor;
 
+    float lastH;
+    float lastV;
+
     private void Start()
     {
         scaleFactor = transform.localScale.x + transform.localScale.y;
@@ -30,6 +33,7 @@ public class AttackPlayer : MonoBehaviour
         {
             attackPoint.SetActive(true);
             AttackOffset();
+            AddForce(lastH, lastV);
         }
         else
         {
@@ -50,6 +54,7 @@ public class AttackPlayer : MonoBehaviour
         Vector3 attackOffset = new Vector3(lastH * 1.3f, lastV, 0);
         attackPoint.transform.position = transform.position + attackOffset;
         AttackBox(Math.Abs(lastH) * scaleFactor, Math.Abs(lastV) * scaleFactor);
+        
     }
 
     private void AttackBox(float offsetX, float offsetY)
@@ -59,5 +64,10 @@ public class AttackPlayer : MonoBehaviour
         float borderY = Math.Abs(attackPoint.transform.localPosition.y) * 2;
 
         hitbox.size = new Vector2(borderX + offsetY, borderY + offsetX);
+    }
+
+    private void AddForce(float x, float y)
+    {
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(x, y) * scaleFactor);
     }
 }

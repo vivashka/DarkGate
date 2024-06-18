@@ -16,8 +16,6 @@ public class SmartMove : MonoBehaviour
 
     void Update()
     {
-        
-
         distanceToPlayer = Vector3.Distance(transform.position, target.position);
 
         if (distanceToPlayer < detectionRadius && distanceToPlayer > target.localScale.x)
@@ -27,7 +25,7 @@ public class SmartMove : MonoBehaviour
             directionX = Mathf.Cos(angle);
             directionY = Mathf.Sin(angle);
             Debug.DrawRay(transform.position, direction, Color.yellow);
-            
+
 
             transform.position = Vector2.MoveTowards(transform.position,
             target.position, moveSpeed * Time.deltaTime);
