@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyIdle : MonoBehaviour
+public class Idle : MonoBehaviour
 {
     public Rigidbody2D creature;
 
-    public void Freeze()
+    public void Patrool()
     {
         creature.freezeRotation = true;
         creature.constraints = RigidbodyConstraints2D.FreezePosition;
