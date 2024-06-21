@@ -6232,6 +6232,67 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &739191791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8459841488794439467, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
+  m_PrefabInstance: {fileID: 2752910463082337784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &739191798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739191791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c875f107a54fb49add97ef117735d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smartMove: {fileID: 739191803}
+  enemyAttack: {fileID: 739191799}
+  enemyIdle: {fileID: 739191805}
+  state: 1
+--- !u!114 &739191799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5869597265713294766, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
+  m_PrefabInstance: {fileID: 2752910463082337784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739191791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9805311044198c43970ba2416c40f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &739191800 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 525619417977194907, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
+  m_PrefabInstance: {fileID: 2752910463082337784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &739191803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2298293355269973089, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
+  m_PrefabInstance: {fileID: 2752910463082337784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739191791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c62b36dc7bdd5438e22c0d8e6e61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &739191805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739191791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac60ea9d66f2b44aa34e3c55af3e1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creature: {fileID: 739191800}
 --- !u!1 &756373255
 GameObject:
   m_ObjectHideFlags: 0
@@ -8687,6 +8748,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2298293355269973089, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
+      propertyPath: enemyAttack
+      value: 
+      objectReference: {fileID: 739191799}
     - target: {fileID: 4408370848284019537, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -8730,7 +8795,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8459841488794439467, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 739191798}
+    - targetCorrespondingSourceObject: {fileID: 8459841488794439467, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 739191805}
   m_SourcePrefab: {fileID: 100100000, guid: b61788eb63062104b9626d6c10fc9005, type: 3}
 --- !u!1001 &3253079692398593282
 PrefabInstance:
@@ -8743,6 +8814,14 @@ PrefabInstance:
     - target: {fileID: 486155285092757917, guid: 69742ca0b7739454abb95bcd5de2cb3f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744507966744611977, guid: 69742ca0b7739454abb95bcd5de2cb3f, type: 3}
+      propertyPath: health
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744507966744611977, guid: 69742ca0b7739454abb95bcd5de2cb3f, type: 3}
+      propertyPath: maxHealth
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3226512921070480487, guid: 69742ca0b7739454abb95bcd5de2cb3f, type: 3}
       propertyPath: m_LocalPosition.x

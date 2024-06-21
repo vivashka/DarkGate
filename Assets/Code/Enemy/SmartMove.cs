@@ -3,6 +3,7 @@ using UnityEngine;
 public class SmartMove : MonoBehaviour
 {
     public float moveSpeed = 1.5f;
+    public EnemyAttack enemyAttack;
 
     public Transform target;
 
@@ -12,20 +13,18 @@ public class SmartMove : MonoBehaviour
 
     float directionX;
     float directionY;
-    public float distanceToPlayer;
+    public float distanceToTarget;
 
-    void Update()
+    public void FollowToTarget()
     {
-        distanceToPlayer = Vector3.Distance(transform.position, target.position);
-
-        if (distanceToPlayer < detectionRadius && distanceToPlayer > target.localScale.x)
+        distanceToTarget = Vector3.Distance(transform.position, target.position);
+        if (distanceToTarget < detectionRadius && distanceToTarget > 2)
         {
             Vector3 direction = target.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x);
             directionX = Mathf.Cos(angle);
             directionY = Mathf.Sin(angle);
             Debug.DrawRay(transform.position, direction, Color.yellow);
-
 
             transform.position = Vector2.MoveTowards(transform.position,
             target.position, moveSpeed * Time.deltaTime);
@@ -37,10 +36,7 @@ public class SmartMove : MonoBehaviour
         }
         else
         {
-            animator.SetFloat("LastH", directionX);
-            animator.SetFloat("LastV", directionY);
             animator.SetFloat("Speed", 0);
         }
     }
-
 }
