@@ -653,10 +653,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1112253538683327987}
-  - component: {fileID: 2298293355269973089}
   - component: {fileID: 4987934631283321543}
   - component: {fileID: 525619417977194907}
-  - component: {fileID: 5869597265713294766}
+  - component: {fileID: 7782446337679983183}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Enemy
@@ -682,24 +681,6 @@ Transform:
   - {fileID: 6238457441688974052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2298293355269973089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8459841488794439467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c62b36dc7bdd5438e22c0d8e6e61bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  enemyAttack: {fileID: 5869597265713294766}
-  target: {fileID: 0}
-  detectionRadius: 10
-  animator: {fileID: 1140754132194323723}
-  distanceToTarget: 0
 --- !u!61 &4987934631283321543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -772,7 +753,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5869597265713294766
+--- !u!114 &7782446337679983183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -781,15 +762,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8459841488794439467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9805311044198c43970ba2416c40f3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 82ed22249488c7649b85deeb85d5bc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMove: {fileID: 2298293355269973089}
-  attackRange: 2
-  attackBox: {fileID: 6825028327933859327}
-  animator: {fileID: 1140754132194323723}
+  health: 10
+  maxHealth: 10
   damage: 2
-  enemyIdle: {fileID: 0}
+  speed: 3
+  isAttacked: 0
+  animator: {fileID: 1140754132194323723}
+  followRange: 10
+  attackRange: 2
+  target: {fileID: 0}
 --- !u!1 &9147885772501898651
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,4 +878,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1930610573537708377}
-  enemyHealth: {fileID: 0}
+  enemyHit: {fileID: 0}
+  health: {fileID: 7782446337679983183}

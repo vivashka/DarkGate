@@ -11,4 +11,6 @@ public class Entity : MonoBehaviour
     public int damage;
 
     public int speed;
+
+    public bool isAttacked = false;
 }

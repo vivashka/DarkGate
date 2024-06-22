@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIEnemy : MonoBehaviour
 {
     public Slider healthBar;
-    public Damaged enemyHit;
+    public DamagedState enemyHit;
     public Enemy health;
 
     // Start is called before the first frame update
@@ -17,9 +17,10 @@ public class UIEnemy : MonoBehaviour
         enemyHit.healthHandler += OnHit;
     }
 
-    private void OnHit()
+    private bool OnHit()
     {
         healthBar.maxValue = health.maxHealth;
         healthBar.value = health.health;
+        return true;
     }
 }

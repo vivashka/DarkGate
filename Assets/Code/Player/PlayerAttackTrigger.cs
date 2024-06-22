@@ -9,7 +9,7 @@ public class PlayerAttackTrigger : MonoBehaviour
         AttackPlayer attackPlayer = gameObject.GetComponent<AttackPlayer>();
         if (collision.tag == "Enemy")
         {
-            Damaged enemyHealth = collision.GetComponent<Damaged>();
+            DamagedState enemyHealth = collision.GetComponent<DamagedState>();
             enemyHealth.TakeDamage(2);
         }
     }

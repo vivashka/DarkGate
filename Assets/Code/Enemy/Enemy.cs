@@ -1,46 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(TargetDetector))]
 public class Enemy : Entity
 {
-    public SmartMove smartMove;
-    public DashAttack enemyAttack;
-    public Idle enemyIdle;
-    public Damaged damaged;
+    public Animator animator;
 
-    public State state;
+    public GameObject attackBox;
 
-    public float distanceToTarget;
+    public float followRange;
+    public float attackRange;
+
+    public TargetDetector targetDetector;
 
     public Transform target;
 
+    public float timeBetweenAttacks = 1f;
+
+    public bool isAttacking;
+
+    StateMachine stateMachine;
+
+    private void Awake()
+    {
+        targetDetector = new() { detectionRadius = followRange, innerDetectionRadius = attackRange};
+    }
+
+    private void Start()
+    {
+        stateMachine = new StateMachine();
+        var enemyFollow = new EnemyFollowState(this, animator, target, followRange);
+        var idleFollow = new EnemyIdleState(this, animator);
+        var attackFollow = new EnemyDashAttackState(this, animator, target, timeBetweenAttacks);
+
+        At(idleFollow, enemyFollow, new FuncPredicate(() => targetDetector.CanFollow(target, transform)));
+        At(enemyFollow, idleFollow, new FuncPredicate(() => !targetDetector.CanFollow(target, transform)));
+        At(enemyFollow, attackFollow, new FuncPredicate(() => targetDetector.CanAttack(target, transform)));
+        At(attackFollow, enemyFollow, new FuncPredicate(() => !targetDetector.CanAttack(target, transform) && !isAttacking));
+
+
+        stateMachine.SetState(idleFollow);
+    }
+
+    void At(IState from, IState to, IPredicate condition) => stateMachine.AddTransition(from, to, condition);
+
+    void Any(IState to, IPredicate condition) => stateMachine.AddAnyTransition(to, condition);
+
+
+
     void Update()
     {
-        distanceToTarget = Vector3.Distance(transform.position, target.position);
+        stateMachine.Update();
+    }
 
-        if (state == State.Damaged)
-        {
-            damaged.Disarrange();
-        }
-        else if (state == State.Follow)
-        {
-            smartMove.FollowToTarget();
-        }
-        else if (state == State.Attack)
-        {
-            enemyAttack.Attack(target);
-        }
-        else if (state == State.Idle)
-        {
-            enemyIdle.Patrool();
-        }
-    }
-    public enum State
+    void FixedUpdate()
     {
-        Attack,
-        Follow,
-        Idle,
-        Damaged
+        stateMachine.FixedUpdate();
     }
+
 }
