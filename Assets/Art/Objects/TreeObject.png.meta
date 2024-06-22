@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TreeOakL
+      name: OakL
       rect:
         serializedVersion: 2
         x: 5
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ff3d880c2785964daf9c00930666a81
-      internalID: 253551879
+      spriteID: 260dc6043a8b1af42922618be8452906
+      internalID: 1891879333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreePineL
+      name: PineL
       rect:
         serializedVersion: 2
         x: 80
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4a24ec2ed152634bacd4e31d5bc9dd8
-      internalID: -1387263945
+      spriteID: ee976ccbe9b38454fb5de5ad66451868
+      internalID: -871290739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreeMapleL
+      name: MapleL
       rect:
         serializedVersion: 2
         x: 160
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5734f3c42e966bf4e81819cd9c011928
-      internalID: -1571185556
+      spriteID: 89d82ee759d1dd2439cae714f0ebd16f
+      internalID: -1176430691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreePineD
+      name: PineD
       rect:
         serializedVersion: 2
         x: 5
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6e4a6b3cf6058d44a83e8aeb7a8aaac
-      internalID: -84895924
+      spriteID: 3294b5f78ac2e8e48a32971d1223c124
+      internalID: 154522926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreeMapleD
+      name: MapleD
       rect:
         serializedVersion: 2
         x: 80
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8956e5f9fa39d6544a1f71a48eda9b32
-      internalID: -1974984789
+      spriteID: 89cf7be92d8c23e419c81a159864feda
+      internalID: -1531965090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreeOakD
+      name: OakD
       rect:
         serializedVersion: 2
         x: 166
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23e230fb083476647948025a4a23e7c8
-      internalID: -857555659
+      spriteID: a977e77c6e4c4d648907206566b04666
+      internalID: -1111414422
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TreeMapleD: -1974984789
-      TreeMapleL: -1571185556
-      TreeOakD: -857555659
-      TreeOakL: 253551879
-      TreePineD: -84895924
-      TreePineL: -1387263945
+      MapleD: -1531965090
+      MapleL: -1176430691
+      OakD: -1111414422
+      OakL: 1891879333
+      PineD: 154522926
+      PineL: -871290739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
