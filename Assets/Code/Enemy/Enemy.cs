@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(TargetDetector))]
@@ -29,16 +30,16 @@ public class Enemy : Entity
     {
         stateMachine = new StateMachine();
         var enemyFollow = new EnemyFollowState(this, animator, target, followRange);
-        var idleFollow = new EnemyIdleState(this, animator);
-        var attackFollow = new EnemyDashAttackState(this, animator, target, timeBetweenAttacks);
+        var idle = new EnemyIdleState(this, animator);
+        var attack = new EnemyDashAttackState(this, animator, target, timeBetweenAttacks);
 
-        At(idleFollow, enemyFollow, new FuncPredicate(() => targetDetector.CanFollow(target, transform)));
-        At(enemyFollow, idleFollow, new FuncPredicate(() => !targetDetector.CanFollow(target, transform)));
-        At(enemyFollow, attackFollow, new FuncPredicate(() => targetDetector.CanAttack(target, transform)));
-        At(attackFollow, enemyFollow, new FuncPredicate(() => !targetDetector.CanAttack(target, transform) && !isAttacking));
+        At(idle, enemyFollow, new FuncPredicate(() => targetDetector.CanFollow(target, transform)));
+        At(enemyFollow, idle, new FuncPredicate(() => !targetDetector.CanFollow(target, transform)));
+        At(enemyFollow, attack, new FuncPredicate(() => targetDetector.CanAttack(target, transform)));
+        At(attack, enemyFollow, new FuncPredicate(() => !targetDetector.CanAttack(target, transform) && !isAttacking));
 
 
-        stateMachine.SetState(idleFollow);
+        stateMachine.SetState(idle);
     }
 
     void At(IState from, IState to, IPredicate condition) => stateMachine.AddTransition(from, to, condition);

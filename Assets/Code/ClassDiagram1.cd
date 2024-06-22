@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DamagedState" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="DamagedState.HealthHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Code\Enemy\DamagedState.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAAQAAI=</HashCode>
+      <FileName>Assets\Code\Enemy\DamagedState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAQAAQAAAiCAAAAMJAAAAAIAAACCAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Code\Enemy\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyAttackTrigger" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Enemy\EnemyAttackTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBaseState">
+    <Position X="14" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAgAAAAAAAAAAABAAAAAQAAAAAIIAgAAAAEI=</HashCode>
+      <FileName>Assets\Code\Enemy\EnemyBaseState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EnemyDashAttackState">
+    <Position X="13.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgACAAAEAAAAAAAAAIAQAAKAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Enemy\EnemyDashAttackState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyFollowState">
+    <Position X="16.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAgAEAAAIIAAAAAAAAAAQAAAAAJgAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Enemy\EnemyFollowState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyIdleState">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgAAAAAAAAAAAAAAAAAUAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Enemy\EnemyIdleState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TargetDetector" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAIAAAAAEAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Code\Enemy\TargetDetector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIEnemy" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAAAAAAAAAAAAAAAAAAABAAAAAAAAQAAg=</HashCode>
+      <FileName>Assets\Code\Enemy\UIEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

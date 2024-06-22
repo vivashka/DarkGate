@@ -13,7 +13,7 @@ public class DynamicYSort : MonoBehaviour
 
     private void Start()
     {
-        ySortingOffset = sortOffsetMarker.position.y;
+        ySortingOffset = sortOffsetMarker.localPosition.y;
     }
 
     void Update()
@@ -23,7 +23,7 @@ public class DynamicYSort : MonoBehaviour
         foreach (SortableSprite sortableSprite in sortableSprites)
         {
             sortableSprite.spriteRenderer.sortingOrder = 
-                baseSortingOrder + sortableSprite.relativeOrder;
+                baseSortingOrder;
         }
     }
 

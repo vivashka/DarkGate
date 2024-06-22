@@ -16,5 +16,4 @@ public class TargetDetector : MonoBehaviour
     {
         return (target.position - detector.position).magnitude <= innerDetectionRadius;
     }
-
 }

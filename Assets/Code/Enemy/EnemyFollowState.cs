@@ -8,7 +8,7 @@ public class EnemyFollowState : EnemyBaseState
     float directionX;
     float directionY;
     public float detectionRadius;
-
+    RaycastHit hit;
 
     public EnemyFollowState(Enemy enemy, Animator animator, Transform target, float followRadius) : base(enemy, animator)
     {
@@ -26,6 +26,7 @@ public class EnemyFollowState : EnemyBaseState
 
         enemy.transform.position = Vector2.MoveTowards(enemy.transform.position,
         target.position, enemy.speed * Time.deltaTime);
+
 
         animator.SetFloat("Horizontal", directionX);
         animator.SetFloat("Vertical", directionY);
