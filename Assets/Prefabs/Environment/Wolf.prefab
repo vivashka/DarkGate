@@ -401,7 +401,7 @@ Transform:
   m_GameObject: {fileID: 3199977405745792850}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.44, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -656,6 +656,7 @@ GameObject:
   - component: {fileID: 4987934631283321543}
   - component: {fileID: 525619417977194907}
   - component: {fileID: 7782446337679983183}
+  - component: {fileID: 3413306907976078517}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Enemy
@@ -771,9 +772,27 @@ MonoBehaviour:
   speed: 3
   isAttacked: 0
   animator: {fileID: 1140754132194323723}
+  attackBox: {fileID: 6825028327933859327}
   followRange: 10
   attackRange: 2
+  targetDetector: {fileID: 3413306907976078517}
   target: {fileID: 0}
+  timeBetweenAttacks: 1
+  isAttacking: 0
+--- !u!114 &3413306907976078517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459841488794439467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838575c4a48de3d41adf233ec7dc1b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 10
+  innerDetectionRadius: 2
 --- !u!1 &9147885772501898651
 GameObject:
   m_ObjectHideFlags: 0
