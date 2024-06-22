@@ -7,7 +7,7 @@ public class NPC : MonoBehaviour
 {
     public DialogueTrigger trigger;
 
-    private void OnCollisionEnter(Collision2D collision2D)
+    private void OnCollisionEnter(Collision collision2D)
     {
         if (collision2D.gameObject.CompareTag("Player") == true)
             trigger.StartDialogue();
