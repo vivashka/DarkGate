@@ -20,10 +20,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        // Не движется, пока в диалоге
-        if (DialogueManager.isActive == true)
-            return;
-
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
