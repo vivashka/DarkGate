@@ -20,6 +20,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        // Не даёт передвигаться до конца диалога
+        if (DialogueManager.instance.isDialoguePlaying)
+        {
+            return;
+        }
+        
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 

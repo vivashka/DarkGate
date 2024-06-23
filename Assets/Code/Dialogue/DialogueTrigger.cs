@@ -13,7 +13,7 @@ public class DialogueTrigger : MonoBehaviour
     
     private bool isPlayerInRange;
 
-    private void Start()
+    private void Awake()
     {
         isPlayerInRange = false;
         visualCue.SetActive(false);
@@ -21,12 +21,12 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInRange)
+        if (isPlayerInRange && !DialogueManager.instance.isDialoguePlaying)
         {
             visualCue.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Debug.Log(inkJSON.text);
+               DialogueManager.instance.EnterDialogueMode(inkJSON);
             }
         }
         else
