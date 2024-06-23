@@ -20,7 +20,6 @@ public class EnemyDashAttackState : EnemyBaseState
     public void Attack()
     {
         enemy.isAttacking = true;
-        enemy.attackBox.SetActive(true);
         float x = animator.GetFloat("LastH");
         float y = animator.GetFloat("LastV");
         rb.MovePosition((Vector2)enemy.transform.position + (new Vector2(x, y).normalized) * 20 * Time.fixedDeltaTime);
@@ -28,7 +27,6 @@ public class EnemyDashAttackState : EnemyBaseState
         {
             attackTimer = attackRate;
             enemy.isAttacking = false;
-            enemy.attackBox.SetActive(false);
         }
     }
 
@@ -36,6 +34,7 @@ public class EnemyDashAttackState : EnemyBaseState
     {
         animator.CrossFade(AttackHash, crossFadeDuration);
         originalposition = new Vector2(enemy.transform.position.x, enemy.transform.position.y);
+        enemy.attackBox.SetActive(true);
     }
 
     public override void Update()

@@ -61,7 +61,7 @@ public class AttackPlayer : MonoBehaviour
     {
         BoxCollider2D hitbox = attackPoint.GetComponent<BoxCollider2D>();
         float borderX = Math.Abs(attackPoint.transform.localPosition.x) * 2;
-        float borderY = Math.Abs(attackPoint.transform.localPosition.y) * 2;
+        float borderY = Math.Abs(attackPoint.transform.localPosition.y) * 1.5f;
 
         hitbox.size = new Vector2(borderX + offsetY, borderY + offsetX);
     }

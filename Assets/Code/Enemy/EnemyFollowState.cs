@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class EnemyFollowState : EnemyBaseState
@@ -8,7 +9,6 @@ public class EnemyFollowState : EnemyBaseState
     float directionX;
     float directionY;
     public float detectionRadius;
-    RaycastHit hit;
 
     public EnemyFollowState(Enemy enemy, Animator animator, Transform target, float followRadius) : base(enemy, animator)
     {
@@ -18,11 +18,19 @@ public class EnemyFollowState : EnemyBaseState
 
     public void FollowToTarget()
     {
+        
         Vector3 direction = target.position - enemy.transform.position;
+        Ray2D ray = new Ray2D(enemy.transform.position, direction);
         float angle = Mathf.Atan2(direction.y, direction.x);
         directionX = Mathf.Cos(angle);
         directionY = Mathf.Sin(angle);
         Debug.DrawRay(enemy.transform.position, direction, Color.yellow);
+        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, direction, 10, LayerMask.GetMask("SolidObjects"));
+
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.collider.gameObject.name);
+        }
 
         enemy.transform.position = Vector2.MoveTowards(enemy.transform.position,
         target.position, enemy.speed * Time.deltaTime);

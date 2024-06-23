@@ -10,7 +10,8 @@ public class EnemyAttackTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
-            playerHealth.TakeDamage(2);
+            playerHealth.TakeDamage(1);
+            gameObject.SetActive(false);
         }
     }
 }

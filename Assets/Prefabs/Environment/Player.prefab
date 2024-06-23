@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8849854077434385318}
   - component: {fileID: 8912557524457736835}
   - component: {fileID: 6373731117227972905}
-  m_Layer: 0
+  - component: {fileID: 7970612193056005391}
+  m_Layer: 3
   m_Name: MainCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,8 +31,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 842689891573851891}
+  m_Children: []
   m_Father: {fileID: 3226512921070480487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8912557524457736835
@@ -107,6 +107,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7970612193056005391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354945831900530401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f4f460c10f3684ab1750a641660738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortableSprites:
+  - spriteRenderer: {fileID: 8912557524457736835}
+    relativeOrder: 1
+  sortOffsetMarker: {fileID: 486155285092757917}
 --- !u!1 &1901076430518259796
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,11 +150,11 @@ Transform:
   m_GameObject: {fileID: 1901076430518259796}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8849854077434385318}
+  m_Father: {fileID: 3226512921070480487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5670508137395581609
 BoxCollider2D:
@@ -206,7 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486155285092757917}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SortingOffsetMarker
   m_TagString: Untagged
   m_Icon: {fileID: 2800000, guid: a04f1625bf500f64e97445265dfbcc93, type: 3}
@@ -222,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 5531388129662297851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -244,8 +260,8 @@ GameObject:
   - component: {fileID: 3180552876335587813}
   - component: {fileID: 2744507966744611977}
   - component: {fileID: 3530892679916701988}
-  - component: {fileID: 3413053373897423319}
-  m_Layer: 0
+  - component: {fileID: 4833045492421900407}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -267,6 +283,7 @@ Transform:
   m_Children:
   - {fileID: 8849854077434385318}
   - {fileID: 486155285092757917}
+  - {fileID: 842689891573851891}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4026984849923096883
@@ -355,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb15cd5bd418e94c957b6273d8a3ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   animator: {fileID: 6373731117227972905}
   attackPoint: {fileID: 1901076430518259796}
 --- !u!61 &3180552876335587813
@@ -415,8 +432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260600aecb36ba54ca3a448d4db5741e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  health: 10
+  maxHealth: 8
+  health: 8
+  healthUI: {fileID: 0}
 --- !u!61 &3530892679916701988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -462,7 +480,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!114 &3413053373897423319
+--- !u!114 &4833045492421900407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -471,6 +489,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7115647301283047194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a56c8caf524857644a43981f1c9125ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 65f4f460c10f3684ab1750a641660738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sortableSprites:
+  - spriteRenderer: {fileID: 8912557524457736835}
+    relativeOrder: 0
+  sortOffsetMarker: {fileID: 486155285092757917}

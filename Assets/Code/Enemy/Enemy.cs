@@ -28,6 +28,7 @@ public class Enemy : Entity
 
     private void Start()
     {
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("CharacterLayer"), LayerMask.NameToLayer("CharacterLayer"));
         stateMachine = new StateMachine();
         var enemyFollow = new EnemyFollowState(this, animator, target, followRange);
         var idle = new EnemyIdleState(this, animator);
