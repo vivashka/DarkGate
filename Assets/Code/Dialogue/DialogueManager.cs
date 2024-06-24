@@ -4,16 +4,23 @@ using System.Collections.Generic;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
 
     private Story currentStory;
-    public bool isDialoguePlaying {get; private set; }
-    
-    public static DialogueManager instance {get; private set; }
+    public bool isDialoguePlaying { get; private set; }
+
+    public static DialogueManager instance { get; private set; }
+
+    [SerializeField] private PlayerHealth playerHealth; // Reference to PlayerHealth
+
+    private string currentDialogueName;
 
     private void Awake()
     {
@@ -29,6 +36,14 @@ public class DialogueManager : MonoBehaviour
     {
         isDialoguePlaying = false;
         dialoguePanel.SetActive(false);
+
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+        foreach (GameObject choice in choices)
+        {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
     }
 
     private void Update()
@@ -37,33 +52,38 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.F))
         {
-            ContinueStory();
-            Debug.Log("Continuing dialogue");
+            if (currentStory.currentChoices.Count > 0)
+            {
+                // Confirm the currently selected choice
+                MakeChoice(EventSystem.current.currentSelectedGameObject.transform.GetSiblingIndex());
+            }
+            else
+            {
+                ContinueStory();
+            }
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON, string dialogueName)
     {
         currentStory = new Story(inkJSON.text);
+        currentDialogueName = dialogueName;
         isDialoguePlaying = true;
         dialoguePanel.SetActive(true);
 
-        Debug.Log("Entered dialogue mode");
         ContinueStory();
     }
 
     private IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
-        
+
         isDialoguePlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
-        
-        Debug.Log("Exited dialogue mode");
     }
 
     private void ContinueStory()
@@ -71,12 +91,63 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
-            Debug.Log("Continuing story: " + dialogueText.text);
+            DisplayChoices();
         }
         else
         {
             StartCoroutine(ExitDialogueMode());
-            Debug.Log("Story ended, exiting dialogue mode");
         }
+    }
+
+    private void DisplayChoices()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+
+        if (currentChoices.Count > choices.Length)
+        {
+            Debug.LogError(
+                $"Вариантов ответа больше, чем UI поддерживает. Количество вариантов: {currentChoices.Count}");
+        }
+
+        int index = 0;
+        foreach (Choice choice in currentChoices)
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+
+        for (int i = index; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
+
+        StartCoroutine(SelectFirstChoice());
+    }
+
+    private IEnumerator SelectFirstChoice()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+    }
+
+    public void MakeChoice(int choiceIndex)
+    {
+        if (choiceIndex < 0 || choiceIndex >= currentStory.currentChoices.Count)
+        {
+            Debug.LogError("Invalid choice index: " + choiceIndex);
+            return;
+        }
+
+        currentStory.ChooseChoiceIndex(choiceIndex);
+
+        // Проверяем, если первый вариант ответа и текущий диалог - тот, который должен восстанавливать здоровье
+        if (choiceIndex == 0 && currentDialogueName == "npc_health_restore")
+        {
+            playerHealth.RestoreHealth(playerHealth.maxHealth);
+        }
+
+        ContinueStory();
     }
 }

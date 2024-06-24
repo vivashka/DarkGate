@@ -30,6 +30,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void RestoreHealth(int amount)
+    {
+        health += amount;
+        if (health > maxHealth)
+            health = maxHealth;
+        healthHandler?.Invoke(health);
+    }
+
+    
     void UpdateUI(int currentHealth)
     {
         if (healthUI != null)

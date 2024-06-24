@@ -9,8 +9,8 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject visualCue;
     [SerializeField] private TextAsset inkJSON;
-    
-    
+    [SerializeField] private string dialogueName; // Добавляем имя диалога
+
     private bool isPlayerInRange;
 
     private void Awake()
@@ -26,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
             visualCue.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
-               DialogueManager.instance.EnterDialogueMode(inkJSON);
+                DialogueManager.instance.EnterDialogueMode(inkJSON, dialogueName);
             }
         }
         else
