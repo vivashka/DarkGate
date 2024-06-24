@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour
         // Не даёт передвигаться до конца диалога
         if (DialogueManager.instance.isDialoguePlaying)
         {
+            movement = Vector2.zero;  // Останавливаем движение
+            animator.SetFloat("Speed", 0); // Устанавливаем скорость анимации в 0
             return;
         }
         

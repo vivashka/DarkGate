@@ -165,174 +165,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WolfAttack_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f462634a31ea2048bfff2780b76a3d7
-      internalID: 1252835661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WolfAttack_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c39b875ec98366f43ad7fcbe81f392de
-      internalID: 17157071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WolfAttack_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3de30ea1e610d1147ba11d29865c3d6a
-      internalID: -935443102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WolfAttack_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b19656457733f14da9b4c7d1f6d1ff7
-      internalID: 1749094629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WolfAttack_6
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19f5a6c7bd0318b43be4ab2e7a32330e
-      internalID: -997241346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WolfAttack_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fb24e315b66b914c9fd52a9b33468cd
-      internalID: 660796873
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WolfAttack_8
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff46c621e2c4452488437b1c5d29690c
-      internalID: 879459240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WolfAttack_9
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b582eb8e64a4e6c4caf904ad44973d1a
-      internalID: 1514838353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: WolfAttack_10
       rect:
         serializedVersion: 2
@@ -347,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d52a6659db1da44b9ab7319c2ac8c93
-      internalID: 833924858
+      spriteID: 3f462634a31ea2048bfff2780b76a3d7
+      internalID: 1252835661
       vertices: []
       indices: 
       edges: []
@@ -368,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c91093e4661d55a4d8a1399b2b162099
-      internalID: 338576753
+      spriteID: c39b875ec98366f43ad7fcbe81f392de
+      internalID: 17157071
       vertices: []
       indices: 
       edges: []
@@ -389,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35cdb68d0d9e3504d9265564aac87b9c
-      internalID: 799250500
+      spriteID: 3de30ea1e610d1147ba11d29865c3d6a
+      internalID: -935443102
       vertices: []
       indices: 
       edges: []
@@ -410,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9951fa9c773497479ea724aac4e645d
-      internalID: -1949031673
+      spriteID: 8b19656457733f14da9b4c7d1f6d1ff7
+      internalID: 1749094629
       vertices: []
       indices: 
       edges: []
@@ -431,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fce1699e758a48a469934145c22cb785
-      internalID: 1553986438
+      spriteID: 19f5a6c7bd0318b43be4ab2e7a32330e
+      internalID: -997241346
       vertices: []
       indices: 
       edges: []
@@ -452,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76b0cc93f466c944e97ae1cb969685b4
-      internalID: 1387474395
+      spriteID: 7fb24e315b66b914c9fd52a9b33468cd
+      internalID: 660796873
       vertices: []
       indices: 
       edges: []
@@ -473,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ab3d86e0daff454cb3a58ef6a694669
-      internalID: -2039918496
+      spriteID: ff46c621e2c4452488437b1c5d29690c
+      internalID: 879459240
       vertices: []
       indices: 
       edges: []
@@ -494,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edb1b1ef644cfa84fa5701712e92196f
-      internalID: -23043967
+      spriteID: b582eb8e64a4e6c4caf904ad44973d1a
+      internalID: 1514838353
       vertices: []
       indices: 
       edges: []
@@ -515,8 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b390e7aa123e19459e4291409dddc62
-      internalID: -1079590430
+      spriteID: 0d52a6659db1da44b9ab7319c2ac8c93
+      internalID: 833924858
       vertices: []
       indices: 
       edges: []
@@ -527,6 +359,174 @@ TextureImporter:
         serializedVersion: 2
         x: 128
         y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91093e4661d55a4d8a1399b2b162099
+      internalID: 338576753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WolfAttack_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cdb68d0d9e3504d9265564aac87b9c
+      internalID: 799250500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WolfAttack_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9951fa9c773497479ea724aac4e645d
+      internalID: -1949031673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WolfAttack_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce1699e758a48a469934145c22cb785
+      internalID: 1553986438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WolfAttack_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b0cc93f466c944e97ae1cb969685b4
+      internalID: 1387474395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WolfAttack_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab3d86e0daff454cb3a58ef6a694669
+      internalID: -2039918496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WolfAttack_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb1b1ef644cfa84fa5701712e92196f
+      internalID: -23043967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WolfAttack_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b390e7aa123e19459e4291409dddc62
+      internalID: -1079590430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WolfAttack_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
         width: 32
         height: 32
       alignment: 7
@@ -555,24 +555,24 @@ TextureImporter:
     nameFileIdTable:
       WolfAttack_0: 1652378926
       WolfAttack_1: 290072497
-      WolfAttack_10: 833924858
-      WolfAttack_11: 338576753
-      WolfAttack_12: 799250500
-      WolfAttack_13: -1949031673
-      WolfAttack_14: 1553986438
-      WolfAttack_15: 1387474395
-      WolfAttack_16: -2039918496
-      WolfAttack_17: -23043967
-      WolfAttack_18: -1079590430
-      WolfAttack_19: 690800454
-      WolfAttack_2: 1252835661
-      WolfAttack_3: 17157071
-      WolfAttack_4: -935443102
-      WolfAttack_5: 1749094629
-      WolfAttack_6: -997241346
-      WolfAttack_7: 660796873
-      WolfAttack_8: 879459240
-      WolfAttack_9: 1514838353
+      WolfAttack_10: 1252835661
+      WolfAttack_11: 17157071
+      WolfAttack_12: -935443102
+      WolfAttack_13: 1749094629
+      WolfAttack_14: -997241346
+      WolfAttack_15: 660796873
+      WolfAttack_16: 879459240
+      WolfAttack_17: 1514838353
+      WolfAttack_18: 833924858
+      WolfAttack_19: 338576753
+      WolfAttack_2: 799250500
+      WolfAttack_3: -1949031673
+      WolfAttack_4: 1553986438
+      WolfAttack_5: 1387474395
+      WolfAttack_6: -2039918496
+      WolfAttack_7: -23043967
+      WolfAttack_8: -1079590430
+      WolfAttack_9: 690800454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

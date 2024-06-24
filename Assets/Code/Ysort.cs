@@ -6,11 +6,9 @@ using UnityEngine;
 
 public class Ysort : MonoBehaviour
 {
-
     void Start()
     {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sortingOrder = transform.GetSortingOrder();
     }
-
 }
