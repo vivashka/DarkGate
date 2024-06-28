@@ -136,7 +136,7 @@ TextureImporter:
         serializedVersion: 2
         x: 11
         y: 0
-        width: 5
+        width: 9
         height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -147,27 +147,6 @@ TextureImporter:
       bones: []
       spriteID: 6fa4d4d66b815774dae6545e60592c67
       internalID: -1894239161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlowersObject_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 2
-        width: 4
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aae39ed40979d8846bbf7ff0e98d3f7b
-      internalID: 2034370962
       vertices: []
       indices: 
       edges: []
