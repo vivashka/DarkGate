@@ -110,85 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Calendula
+      name: FlowersObject_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 10
         height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8af35cf25c1e7144da15f001bf385238
-      internalID: -1268883441
+      spriteID: ad0483225ba672c4da9d9413e5000e20
+      internalID: 303918080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Salvia
+      name: FlowersObject_1
       rect:
         serializedVersion: 2
         x: 11
         y: 0
-        width: 9
+        width: 5
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73ebd4f531f270444b2c248433e5c8ec
-      internalID: 1220029551
+      spriteID: 6fa4d4d66b815774dae6545e60592c67
+      internalID: -1894239161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Daisies
+      name: FlowersObject_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2
+        width: 4
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae39ed40979d8846bbf7ff0e98d3f7b
+      internalID: 2034370962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlowersObject_3
       rect:
         serializedVersion: 2
         x: 21
         y: 0
         width: 11
         height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f174bfd83b8dd594d953e80cc601e84b
-      internalID: -1800722571
+      spriteID: a357c0eda9fe478499c2fdbb74209aa0
+      internalID: 940939354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Berries
+      name: FlowersObject_4
       rect:
         serializedVersion: 2
         x: 33
         y: 0
         width: 10
         height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e177cc246897127448f9d92263462b2c
-      internalID: 1084062594
+      spriteID: 1dd5e8a09a8f58949b02fd69135ef169
+      internalID: -1540952504
       vertices: []
       indices: 
       edges: []
@@ -204,10 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Berries: 1084062594
-      Calendula: -1268883441
-      Daisies: -1800722571
-      Salvia: 1220029551
+      FlowersObject_0: 303918080
+      FlowersObject_1: -1894239161
+      FlowersObject_2: 2034370962
+      FlowersObject_3: 940939354
+      FlowersObject_4: -1540952504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
