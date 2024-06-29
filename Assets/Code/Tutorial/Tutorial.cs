@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
-    public GameObject player; // Ваш персонаж
+    public GameObject player;
     public Image wasdImage; // Image для первой фазы туториала
     public Image shiftWasdImage; // Image для второй фазы туториала
     public Image leftClickImage; // Image для третьей фазы туториала

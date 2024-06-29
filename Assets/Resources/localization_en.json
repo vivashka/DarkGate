@@ -1,0 +1,12 @@
+{
+    "items": [
+        { "key": "Start Game", "value": "Start Game" },
+        { "key": "Settings", "value": "Settings" },
+        { "key": "Exit", "value": "Exit" },
+	{ "key": "Continue", "value": "Continue" },
+	{ "key": "Resolution", "value": "Resolution" },
+	{ "key": "Language", "value": "Language" },
+	{ "key": "Accept", "value": "Accept" },
+	{ "key": "Quit", "value": "Quit" }
+    ]
+}

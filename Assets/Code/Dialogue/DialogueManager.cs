@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Ink.Runtime;
 using TMPro;
 using UnityEngine;
+using Ink.Runtime;
 using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
@@ -18,7 +17,7 @@ public class DialogueManager : MonoBehaviour
 
     public static DialogueManager instance { get; private set; }
 
-    [SerializeField] private PlayerHealth playerHealth; // Reference to PlayerHealth
+    [SerializeField] private PlayerHealth playerHealth;
 
     private string currentDialogueName;
 
@@ -38,26 +37,20 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
-        int index = 0;
-        foreach (GameObject choice in choices)
+        for (int i = 0; i < choices.Length; i++)
         {
-            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
-            index++;
+            choicesText[i] = choices[i].GetComponentInChildren<TextMeshProUGUI>();
         }
     }
 
     private void Update()
     {
-        if (!isDialoguePlaying)
-        {
-            return;
-        }
+        if (!isDialoguePlaying) return;
 
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (currentStory.currentChoices.Count > 0)
             {
-                // Confirm the currently selected choice
                 MakeChoice(EventSystem.current.currentSelectedGameObject.transform.GetSiblingIndex());
             }
             else
@@ -105,8 +98,7 @@ public class DialogueManager : MonoBehaviour
 
         if (currentChoices.Count > choices.Length)
         {
-            Debug.LogError(
-                $"Вариантов ответа больше, чем UI поддерживает. Количество вариантов: {currentChoices.Count}");
+            Debug.LogError($"Вариантов ответа больше, чем UI поддерживает. Количество вариантов: {currentChoices.Count}");
         }
 
         int index = 0;
@@ -142,12 +134,20 @@ public class DialogueManager : MonoBehaviour
 
         currentStory.ChooseChoiceIndex(choiceIndex);
 
-        // Проверяем, если первый вариант ответа и текущий диалог - тот, который должен восстанавливать здоровье
         if (choiceIndex == 0 && currentDialogueName == "npc_health_restore")
         {
             playerHealth.RestoreHealth(playerHealth.maxHealth);
         }
 
         ContinueStory();
+    }
+    
+    public void UpdateDialogueTriggers()
+    {
+        DialogueTrigger[] triggers = FindObjectsOfType<DialogueTrigger>();
+        foreach (DialogueTrigger trigger in triggers)
+        {
+            trigger.SetCurrentInkJSON();
+        }
     }
 }

@@ -1,0 +1,12 @@
+{
+    "items": [
+        { "key": "Start Game", "value": "Начать игру" },
+        { "key": "Settings", "value": "Настройки" },
+        { "key": "Exit", "value": "Выход" },
+	{ "key": "Continue", "value": "Продолжить" },
+	{ "key": "Resolution", "value": "Разрешение" },
+	{ "key": "Language", "value": "Язык" },
+	{ "key": "Accept", "value": "Принять" },
+	{ "key": "Quit", "value": "Выйти" }
+    ]
+}
